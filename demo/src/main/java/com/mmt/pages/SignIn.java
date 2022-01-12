@@ -106,6 +106,7 @@ private WebDriver driver;
         driver.findElement(By.xpath("//button[@id='hsw_search_button']")).click();
         Thread.sleep(5000);
         act.moveToElement(driver.findElement(By.xpath("//*[@name='min']")));
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@name='min']")).sendKeys("500");
         driver.findElement(By.xpath("//*[@name='max']")).sendKeys("5000");
         Thread.sleep(4000);
@@ -114,6 +115,22 @@ private WebDriver driver;
         Thread.sleep(5000);
         //act.moveToElement(driver.findElement(By.xpath("//div[@id='Listing_hotel_0']")));
         driver.navigate().to(driver.findElement(By.xpath("//div[@id='Listing_hotel_0']//*")).getAttribute("href"));
+        Thread.sleep(2000);
+        driver.navigate().back();
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("//*[@class='apldFltr__item--close']")).click();
+        Thread.sleep(5000);
+        driver.findElement(By.xpath("//*[text()='Show 3 more' and @id='hlistpg_proptypes_show_more'][1]")).click();
+
+        driver.findElement(By.xpath("//*[text()='Staycations']")).click();
+        Thread.sleep(2000);
+        driver.navigate().to(driver.findElement(By.xpath("//div[@id='Listing_hotel_0']//*")).getAttribute("href"));
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//div[@class='makeFlex hrtlCenter']")).click();
+        driver.findElement(By.xpath("//*[text()='My Profile'][1]")).click();
+        Thread.sleep(2000);
+        jse.executeScript("arguments[0].click()", driver.findElement(By.xpath("//*[text()='Logout'][1]")));
+        //driver.findElement(By.xpath("//*[text()='Logout'][1]")).click();
 
 
 
