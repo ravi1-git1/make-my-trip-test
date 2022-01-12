@@ -108,10 +108,12 @@ private WebDriver driver;
         act.moveToElement(driver.findElement(By.xpath("//*[@name='min']")));
         driver.findElement(By.xpath("//*[@name='min']")).sendKeys("500");
         driver.findElement(By.xpath("//*[@name='max']")).sendKeys("5000");
-        Thread.sleep(2000);
+        Thread.sleep(4000);
 
         driver.findElement(By.xpath("//*[@class='btnRangeGo appendLeft5 ']")).click();
-
+        Thread.sleep(5000);
+        //act.moveToElement(driver.findElement(By.xpath("//div[@id='Listing_hotel_0']")));
+        driver.navigate().to(driver.findElement(By.xpath("//div[@id='Listing_hotel_0']//*")).getAttribute("href"));
 
 
 
