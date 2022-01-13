@@ -8,7 +8,7 @@ public class List_Hotels {
 
 
 
-    WebDriver driver;
+    private WebDriver driver;
     By min= By.xpath("//*[@name='min']");
     By max= By.xpath("//*[@name='max']");
     By arrow_button= By.xpath("//*[@class='btnRangeGo appendLeft5 ']");
@@ -23,6 +23,7 @@ public class List_Hotels {
 
     public void apply_filter() throws InterruptedException {
         Actions act =  new Actions(driver);
+        Thread.sleep(2000);
         act.moveToElement(driver.findElement(min));
         Thread.sleep(2000);
         driver.findElement(min).sendKeys("500");

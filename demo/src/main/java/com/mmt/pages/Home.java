@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class Home {
 
 
-    WebDriver driver;
+    private WebDriver driver;
     By Google_login= By.xpath("//*[text()='Google']");
 
     public Home(WebDriver driver) {

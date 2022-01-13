@@ -12,7 +12,7 @@ import java.util.Calendar;
 
 public class Hotels {
 
-    WebDriver driver;
+    private WebDriver driver;
     By click_city= By.xpath("//input[@class='hsw_inputField lineHeight36 latoBlack font30']");
     By select_city= By.xpath("//input[@class='react-autosuggest__input react-autosuggest__input--open']");
     By select_bangalore= By.xpath("//p[text()='Bangalore, Karnataka, India']");
@@ -32,6 +32,8 @@ public class Hotels {
 
 
     public void select_hotel() throws InterruptedException {
+        Thread.sleep(5000);
+        driver.navigate().to("https://www.makemytrip.com/hotels/");
         driver.findElement(click_city).click();
         Thread.sleep(5000);
         driver.findElement(select_city).sendKeys("Bangalore");
@@ -61,9 +63,9 @@ public class Hotels {
 
     public void search() throws InterruptedException {
 
-
+        System.out.println("searching ");
         //driver.findElement(By.xpath("//p[@class='makeFlex vrtlCenter']")).click();
-
+        Thread.sleep(5000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
         //js.executeScript("arguments[0].scrollIntoView();", driver.findElement(By.xpath("//*[text()='APPLY']")));

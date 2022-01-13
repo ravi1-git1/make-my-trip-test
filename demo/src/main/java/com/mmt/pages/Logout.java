@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class Logout {
 
-    WebDriver driver;
+    private WebDriver driver;
     By profile= By.xpath("//*[text()='My Profile'][1]");
     By logout= By.xpath("//*[text()='Logout'][1]");
 

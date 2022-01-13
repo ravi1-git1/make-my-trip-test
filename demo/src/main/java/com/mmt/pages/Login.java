@@ -10,8 +10,8 @@ public class Login {
 
 
 
-    WebDriver driver;
-    String parent= driver.getWindowHandle();
+    private WebDriver driver;
+
     By Google_login= By.xpath("//*[text()='Google']");
     By email= By.xpath("//input[@type='email']");
     By next_button= By.xpath("//span[text()='Next']");
@@ -24,11 +24,10 @@ public class Login {
         this.driver=driver;
     }
 
-    public void clickLogin() {
-        driver.findElement(Google_login).click();
-    }
+
 
     public void switchWindow_login() throws InterruptedException {
+        String parent= driver.getWindowHandle();
         Set<String> s = driver.getWindowHandles();
         Iterator<String> I1= s.iterator();
         while (I1.hasNext())

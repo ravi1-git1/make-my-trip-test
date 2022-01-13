@@ -13,10 +13,10 @@ import java.util.Calendar;
 import java.util.Iterator;
 import java.util.Set;
 
-public class SignIn {
+public class Full_test_without_POM {
 private WebDriver driver;
 
- public SignIn(WebDriver driver){
+ public Full_test_without_POM(WebDriver driver){
      this.driver= driver;
  }
 
