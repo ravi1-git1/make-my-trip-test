@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class SignIntest  extends BasePage {
+public class All_test_cases extends BasePage {
 
     private WebDriver driver;
     private SignIn signin;
